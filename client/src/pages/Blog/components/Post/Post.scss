@@ -1,0 +1,39 @@
+.post{
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+    .text{
+        h2{
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+        .info{
+            margin: 6px 0;
+            color: gray;
+            font-size: .7rem;
+            font-weight: bold;
+            display: flex;
+            gap: 10px;
+
+            .author{
+                color: antiquewhite;
+            }
+            time{
+                color: rgb(255, 255, 255);
+            }
+
+        }
+        .summary{
+            margin: 6px 0;
+            font-size: .9rem;
+            line-height: 1.2rem;
+        }
+    }
+}
