@@ -13,6 +13,16 @@ const uploadMiddleware = multer({dest: 'uploads/' });
 const bodyParser = require('body-parser');
 const BASE_URL = ""
 
+const storage = multer.diskStorage({
+    destination: '/tmp/uploads', // Use '/tmp' for temporary storage
+    filename: (req, file, cb) => {
+      cb(null, file.originalname);
+    },
+  });
+  
+  const upload = multer({ storage });
+
+
 
 const stripe = require('stripe')('sk_test_51LVV9TSIAChIdT5GIwm9vsklCMNQkXMJDRz0hfPxw4EyZmcjlIqfTBx2s0MvlYoSUIeSriLqgvCJn3n7E29chtrx00pyTzZWtf'); // Replace with your Stripe secret key
 
@@ -28,6 +38,7 @@ app.use(bodyParser.json());
 app.use(express.json())
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'))
+
 
 
 
