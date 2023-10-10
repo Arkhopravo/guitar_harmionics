@@ -34,6 +34,10 @@ app.use('/uploads', express.static(__dirname + '/uploads'))
 
 mongoose.connect('mongodb+srv://arkhopsarkar:4wimyFN5FMTgEaUf@cluster0.2au5ams.mongodb.net/?retryWrites=true&w=majority')
 
+
+app.get('/', (req, res) => {
+    res.send("server is running perfectly")
+})
 app.post('/register', async (req,res)=> {
    const {username, email, password} = req.body;
    try{
