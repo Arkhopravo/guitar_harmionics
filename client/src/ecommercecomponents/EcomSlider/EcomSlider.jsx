@@ -71,7 +71,7 @@ const EcomSlider = () => {
         </div>
         <div>
           <img className='images'
-          src="/src/assets/images/Mandolin.jpg" 
+          src="/public/images/Mandoline/Mandolin.jpg" 
           alt="Image 2" />
         
         </div>

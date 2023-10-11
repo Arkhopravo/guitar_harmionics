@@ -6,7 +6,7 @@ function HomeAbout() {
 
     <div className="homeabout">
       
-      <img src="src\assets\images\Read more.png" alt="" />
+      <img src="/public/images/Read more.png" alt="" />
      
     </div>
   )
