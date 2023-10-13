@@ -21,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   
   <React.StrictMode>
 
-    <GoogleOAuthProvider clientId="252241189175-9b130cibn2402l1n8b0e1v03d9jov3m1.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId={import.meta.env.GOOGLE_CLIENT_ID}>
      <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
   

@@ -11,7 +11,7 @@ const Header = () => {
 
   useEffect(() => {
     
-  fetch("http://localhost:4000/profile",{
+  fetch("https://guitar-harmionics-apiblog.onrender.com/profile",{
     credentials:'include',
   }).then(response => {
     response.json().then((userInfo )=> {
@@ -23,7 +23,7 @@ const Header = () => {
   }, [])
 
   const logout = () => {
-    fetch("http://localhost:4000/logout", {
+    fetch("https://guitar-harmionics-apiblog.onrender.com/logout", {
       credentials:'include',
       method:'POST',
     });

@@ -12,7 +12,7 @@ export const PostPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/post/${id}`)
+    fetch(`https://guitar-harmionics-apiblog.onrender.com/post/${id}`)
       .then(response => {
         response.json().then(postInfo => {
           setPostInfo(postInfo);
@@ -53,7 +53,7 @@ export const PostPage = () => {
         <div className="md:flex items-center justify-center md:max-xl:flex">
 
           <div className="md:shrink-0 items-center">
-            <img src={`http://localhost:4000/${postInfo.cover}`} alt="" className='h-full w-full object-cover md:h-full md:w-96 rounded-xl' />
+            <img src={`https://guitar-harmionics-apiblog.onrender.com/${postInfo.cover}`} alt="" className='h-full w-full object-cover md:h-full md:w-96 rounded-xl' />
           </div>
         </div>
 

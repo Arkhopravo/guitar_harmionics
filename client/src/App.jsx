@@ -14,7 +14,7 @@ import Lessons from './pages/Learning/Lessons/Lessons'
 import Music from './pages/Music/Music'
 
 import BlogApp from './pages/Blog/BlogApp/BlogApp'
-import Register from './Register/Register'
+import Register from './pages/Register/Register'
 import Profile from './pages/Profile/Profile'
 import { UserContext, UserContextProvider } from './pages/Blog/bloghooks/UserContext'
 import CreatePost from './pages/Blog/pages/CreatePost'

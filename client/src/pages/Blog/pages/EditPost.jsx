@@ -20,7 +20,7 @@ const EditPost = () => {
     const [cover, setCover] = useState(false);
 
     useEffect(() => {
-      fetch('http://localhost:4000/post/' +id).then(response => {
+      fetch('https://guitar-harmionics-apiblog.onrender.com/post/' +id).then(response => {
         response.json().then(postInfo => {
             setTitle(postInfo.title);
             setContent(postInfo.content);
@@ -48,7 +48,7 @@ const EditPost = () => {
         }
 
 
-        const response = await fetch('http://localhost:4000/post', {
+        const response = await fetch('https://guitar-harmionics-apiblog.onrender.com/post', {
             method: 'PUT',
             body: data,
             credentials: 'include',

@@ -33,7 +33,7 @@ const fs = require('fs')
 const salt = bcrypt.genSaltSync(10);
 const secret = 'secret'
 
-app.use(cors({credentials: true, origin:["http://localhost:5173", ""]}))
+app.use(cors({credentials: true, origin:["http://localhost:5173", "https://guitar-harmionics.netlify.app"]}))
 app.use(bodyParser.json());
 app.use(express.json())
 app.use(cookieParser());

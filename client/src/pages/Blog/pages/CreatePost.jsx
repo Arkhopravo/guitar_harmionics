@@ -32,7 +32,7 @@ const CreatePost = () => {
             }
         }
 
-        const response = await fetch('http://localhost:4000/post', {
+        const response = await fetch('https://guitar-harmionics-apiblog.onrender.com/post', {
             method: 'POST',
             body: data,
             credentials: 'include',
