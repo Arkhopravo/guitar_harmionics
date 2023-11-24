@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Beginners from './components/Beginners';
 import Intermediate from './components/Intermediate';
 import Advanced from './components/Advanced';
+import { Link } from 'react-router-dom';
 
 const Music = () => {
   const [showBeginners, setShowBeginners] = useState(false);
@@ -71,6 +72,7 @@ const Music = () => {
 
           
         </div>
+        <Link to="/quize" className='mt-6 inline-block px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full font-semibold transition duration-300 ease-in-out'>Take Quize</Link>
       </div>
     </div>
       </>

@@ -22,6 +22,7 @@ import PostPage from './pages/Blog/pages/PostPage'
 import EditPost from './pages/Blog/pages/EditPost'
 import SubscriptionPanel from './pages/Subscription/SubscriptionPanel'
 import Shop from './pages/Shop/Shop'
+import QuizeApp from './pages/Quiz/QuizeApp'
 
 
 
@@ -88,8 +89,8 @@ const router = createBrowserRouter([
   
   
   {
-    path:'/music',
-    element:<Music/>
+    path:'/quize',
+    element:<QuizeApp/>
     
   },
  
