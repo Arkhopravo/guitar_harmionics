@@ -33,7 +33,7 @@ const fs = require('fs')
 const salt = bcrypt.genSaltSync(10);
 const secret = 'secret'
 
-app.use(cors({credentials: true, origin:["http://localhost:5173", "https://guitar-harmionics.netlify.app"]}))
+app.use(cors({credentials: true, origin:["http://localhost:5173", ""]}))
 app.use(bodyParser.json());
 app.use(express.json())
 app.use(cookieParser());
@@ -43,12 +43,22 @@ app.use('/uploads', express.static(__dirname + '/uploads'))
 
 
 
-mongoose.connect('mongodb+srv://arkhopsarkar:4wimyFN5FMTgEaUf@cluster0.2au5ams.mongodb.net/?retryWrites=true&w=majority')
+// mongoose.connect('mongodb+srv://arkhopsarkar:4wimyFN5FMTgEaUf@cluster0.2au5ams.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(
+    'mongodb+srv://arkhopsarkar:266QEz7eoXkEuW26@learning-server.n74ppfv.mongodb.net/?retryWrites=true&w=majority&appName=learning-server'
+)
+.then(()=> {
+console.log("mongodb server is connected")
+})
+
+const db = mongoose.connection;
 
 
 app.get('/', (req, res) => {
     res.send("server is running perfectly")
 })
+
+
 app.post('/register', async (req,res)=> {
    const {username, email, password} = req.body;
    try{
@@ -264,7 +274,7 @@ app.post('/create-subscription', async (req, res) => {
 
 
 
-const PORT = process.env.PORT || 4000;
+const PORT = 4000;
 
 //app listeners
 app.listen(PORT,()=> {

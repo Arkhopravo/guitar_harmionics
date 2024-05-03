@@ -6,7 +6,7 @@ const Profile = () => {
 
   useEffect(() => {
       
-    fetch("https://guitar-harmionics-apiblog.onrender.com/profile",{
+    fetch("http://localhost:4000/profile",{
       credentials:'include',
     }).then(response => {
       response.json().then((userInfo )=> {
